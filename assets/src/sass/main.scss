@@ -1,0 +1,17 @@
+//vendor
+@import "~normalize.scss/normalize";
+@import "vendor/slickfix";
+@import "~slick-carousel/slick/slick";
+@import "~bootstrap-4-grid/scss/grid";
+@import "~slick-carousel/slick/slick-theme";
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
+//global
+@import "variables";
+@import "global";
+
+//components
+@import "components/header";
+@import "components/mobile-menu";
+@import "components/front-page";

@@ -1,0 +1,36 @@
+{
+  "name": "ydm-boilerplate",
+  "version": "1.2.0",
+  "description": "YDM Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "node =development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Your Dutch Media",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-4-grid": "^3.2.0",
+    "browserslist": "^4.8.3",
+    "jquery": "^3.4.1",
+    "laravel-mix": "^4.1.4",
+    "normalize.scss": "^0.1.0",
+    "sass": "^1.24.4",
+    "slick-carousel": "^1.8.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^6.0.3",
+    "resolve-url-loader": "^2.3.2",
+    "sass-loader": "^7.3.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
