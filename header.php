@@ -13,6 +13,7 @@
     //styles
     include "views/header/styles.php";
     ?>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

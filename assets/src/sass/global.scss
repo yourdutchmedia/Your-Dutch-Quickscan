@@ -2,7 +2,9 @@ html,
 body {
   margin: 0 !important;
   overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
 }
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -19,3 +21,17 @@ ul {
   list-style: none;
 }
 
+.container {
+  max-width: 100%;
+  padding: 0 40px;
+  @media (max-width: 991px) {
+    padding: 0 15px;
+  }
+}
+
+#gform_page_1_2, #gform_page_1_3 {
+  .gform_page_footer {
+    border-top: none;
+    margin: 20px 0 0 0;
+  }
+}

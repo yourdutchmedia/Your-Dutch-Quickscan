@@ -1,24 +1,332 @@
-.front-hero {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    background: white;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    .herorow {
-        height: 100vh;
-        .front-content{
-            text-align: center;
-            img {
-                height: 170px;
-            }
-            h1 {
-                color: #f36f21;
-                font-size: 45px;
-            }
-        }
+.home {
+  .quickscan-form {
+    position: relative;
+    @media (max-width: 1200px) {
+      margin-bottom: 4px;
     }
-}
+    .bg-mobile {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: none;
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+      @media (max-width: 1200px) {
+        display: block;
+      }
+    }
+    .gradient {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(70deg, rgba(255,255,255,0) 15%, rgba(21,35,88,0.12) 80%);
+      @media (max-width: 1200px) {
+        background: transparent;
+      }
+    }
+    .quickscan-row {
+      min-height: 100vh;
+      padding: 40px 0;
+      @media (max-width: 1200px) {
+        margin-bottom: -4px;
+      }
 
-  
+      .title {
+        margin-bottom: 20px;
+
+        h1 {
+          font-size: 65px;
+          line-height: 1.2;
+          color: #152358;
+          margin: 0;
+          @media (max-width: 1600px) {
+            font-size: 50px;
+          }
+          @media (max-width: 991px) {
+            font-size: 40px;
+          }
+          @media (max-width: 575px) {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .subtext {
+        p {
+          color: #7a7c7f;
+          font-size: 22px;
+          margin: 0;
+          line-height: 1.2;
+          @media (max-width: 575px) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .img-holder {
+        height: 91vh;
+        box-shadow: 0 0 16px rgba(96, 96, 96, 0.5);
+        position: relative;
+        @media (max-width: 1200px) {
+          position: initial;
+          display: none;
+        }
+        .overlay {
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .logo {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+
+    .form {
+      position: relative;
+      overflow: hidden;
+      .gf_page_steps {
+        position: absolute;
+        width: auto;
+        border-bottom: none;
+        bottom: 40px;
+        right: 0;
+        @media (max-width: 640px) {
+          bottom: -10px;
+        }
+        .gf_step {
+          border-radius: 50%;
+          margin: 0 10px;
+          width: 20px;
+          height: 20px;
+          background: #7a7c7f;
+          @media (max-width: 1200px) {
+            background: #fff;
+            opacity: 1;
+          }
+          @media (max-width: 640px) {
+            margin: 10px 0;
+          }
+          &.gf_step_active {
+            background: #df081d;
+          }
+          .gf_step_number {
+            display: none;
+          }
+        }
+      }
+      .gform_wrapper {
+        margin: 0;
+
+        .gform_title {
+          display: none;
+        }
+
+        .gfield_label {
+          font-size: 20px;
+          font-weight: 500;
+          color: #7a7c7f;
+        }
+        .gfield_required {
+          display: none;
+        }
+
+
+        .ginput_container_radio {
+          input {
+            width: auto;
+          }
+          label {
+            font-size: 18px;
+            font-weight: 500;
+            color: #7a7c7f;
+          }
+          input[type=radio] {
+            display: none;
+          }
+
+          input[type=radio] label {
+            position: relative;
+            cursor: pointer;
+          }
+
+          input[type=radio] + label:before {
+            content: '';
+            display:inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 8px 0 8px;
+            vertical-align:middle;
+            cursor:pointer;
+            border-radius:  50%;
+            background-color: #7a7c7f;
+            position: relative;
+            top: -2px;
+          }
+
+          input[type=radio]:checked + label {
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: -2px;
+              left: 4px;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              display: inline-block;
+              cursor:pointer;
+            }
+
+            &:before {
+              background-color: #df081d;
+            }
+          }
+        }
+        .input-text {
+          width: 100% !important;
+        }
+        .ginput_container_select {
+          position: relative;
+          &:before {
+            position: absolute;
+            content: '';
+            right: 20px;
+            bottom: 20px;
+            border-bottom: 2px solid #152358;
+            border-right: 2px solid #152358;
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg);
+            z-index: -1;
+          }
+          select {
+            width: 100%;
+            padding: 35px 0 15px 8px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #152358;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+          }
+        }
+        input {
+          width: 100% !important;
+          border: none;
+          border-bottom: 2px solid #152358;
+          padding: 35px 0 20px 8px !important;
+          font-size: 24px !important;
+          font-weight: 600;
+          color: #152358;
+          outline: none;
+          background: transparent;
+          @media (max-width: 1200px) {
+            padding: 35px 0 15px 8px !important;
+          }
+          @media (max-width: 768px) {
+            padding: 25px 0 15px 8px !important;
+          }
+
+          &::placeholder {
+            font-size: 24px;
+            font-weight: 500;
+            color: #7a7c7f;
+          }
+
+          &[type="button"], &[type="submit"] {
+            width: auto !important;
+            padding: 20px 40px !important;
+            border: none;
+            margin-top: 20px;
+            color: #fff;
+            background: #df081d;
+            font-size: 22px !important;
+            text-transform: uppercase;
+            border-radius: 50px;
+            border-bottom: none !important;
+            line-height: normal !important;
+            min-height: unset !important;
+          }
+          &[value="Vorige"] {
+            background: transparent;
+            color: #7a7c7f;
+            font-size: 20px !important;
+          }
+        }
+
+        .gform_page_footer {
+          border-top: 1px solid #152358;
+          margin: 20px 0 0 0;
+        }
+
+        .validation_error {
+          display: none;
+        }
+
+        .gfield_error {
+          background-color: transparent !important;
+          margin-bottom: 0 !important;
+          border: none !important;
+          padding: 0;
+
+          input {
+            border-bottom: 2px solid #df081d !important;
+          }
+        }
+
+        .gfield {
+          position: relative;
+        }
+
+        .gfield_description {
+          padding: 0;
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    p, input, h1 {
+      color: #fff !important;
+    }
+    label {
+      color: #fff !important;
+    }
+    input {
+      border-bottom: 2px solid #fff !important;
+      &::placeholder {
+        color: #fff !important;
+      }
+    }
+    input[type=radio] + label:before {
+      background-color: #fff !important;
+    }
+    input[type=radio]:checked + label {
+      &:before {
+        background-color: #df081d !important;
+      }
+    }
+  }
+}
