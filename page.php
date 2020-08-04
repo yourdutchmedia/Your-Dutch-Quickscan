@@ -9,6 +9,9 @@ get_header();
                     <div class="title">
                         <h1><?= field('hero_titel') ?><span class="dot">.</span></h1>
                     </div>
+                    <div class="subtitle">
+                        <p><?= field('hero_subtekst') ?></p>
+                    </div>
                 </div>
             </div>
         </div>

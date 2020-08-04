@@ -2,7 +2,6 @@
   .hero-row {
     height: 20vh;
     .title {
-      margin-bottom: 20px;
 
       h1 {
         font-size: 65px;
@@ -18,6 +17,13 @@
         @media (max-width: 575px) {
           font-size: 30px;
         }
+      }
+    }
+    .subtitle {
+      p {
+        margin: 0;
+        font-size: 20px;
+        color: #707070;
       }
     }
   }
