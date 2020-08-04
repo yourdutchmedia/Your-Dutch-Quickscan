@@ -1,93 +1,46 @@
 .thanks {
-  position: relative;
-  background: center no-repeat;
-  background-size: cover;
-  overflow: hidden;
+  .thnx-row {
+    min-height: 100vh;
 
-  .overlay {
-    background: #152358;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+    .title {
+      margin-bottom: 30px;
 
-  .logo {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-  }
-
-  .container {
-    max-width: 1640px;
-
-    .thnx-row {
-      height: 100vh;
-
-      .border-top {
-        border-left: 2px solid #df081d;
-        border-top: 2px solid #df081d;
-        position: absolute;
-        top: -20px;
-        left: 0;
-        width: 80px;
-        height: 80px;
-        @media (max-width: 991px) {
-          left: 0;
-        }
-      }
-
-      .border-bottom {
-        border-right: 2px solid #df081d;
-        border-bottom: 2px solid #df081d;
-        position: absolute;
-        bottom: 40px;
-        right: 0;
-        width: 80px;
-        height: 80px;
-        @media (max-width: 1600px) {
-          right: 0;
-        }
-      }
-
-      .title {
-        margin-bottom: 30px;
-        h1 {
-          font-size: 95px;
-          color: #fff;
-          font-weight: 800;
-          margin: 0;
-          @media (max-width: 1200px) {
-            font-size: 60px;
-          }
-        }
-      }
-      .subtitle {
-        margin-bottom: 50px;
-        h2 {
+      h1 {
+        font-size: 95px;
+        color: #333;
+        font-weight: 800;
+        margin: 0;
+        @media (max-width: 1200px) {
           font-size: 60px;
-          margin: 0;
-          color: #fff;
-          @media (max-width: 1200px) {
-            font-size: 40px;
-          }
+        }
+        @media (max-width: 768px) {
+          font-size: 40px;
         }
       }
+    }
 
-      .button {
-        a {
-          display: inline-block;
-          text-decoration: none;
-          width: auto;
-          padding: 20px 40px;
-          color: #fff;
-          background: #df081d;
-          font-size: 22px;
-          text-transform: uppercase;
-          border-radius: 50px;
-          font-weight: 600;
+    .button {
+      margin-top: 20px;
+      .full_btn {
+        display: inline-block;
+        width: auto !important;
+        padding: 20px 50px !important;
+        border: none;
+        margin-top: 20px;
+        color: #fff;
+        background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #ff7135);
+        box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.5);
+        background-size: 300% 100%;
+        font-size: 20px !important;
+        border-radius: 50px;
+        border-bottom: none !important;
+        line-height: normal !important;
+        min-height: unset !important;
+        transition: all .2s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          background-position: 100%;
         }
       }
     }

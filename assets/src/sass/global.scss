@@ -21,17 +21,10 @@ ul {
   list-style: none;
 }
 
-.container {
-  max-width: 100%;
-  padding: 0 40px;
-  @media (max-width: 991px) {
-    padding: 0 15px;
-  }
+section {
+  padding: 40px 0;
 }
 
-#gform_page_1_2, #gform_page_1_3 {
-  .gform_page_footer {
-    border-top: none;
-    margin: 20px 0 0 0;
-  }
+.dot {
+  color: #F6931E;
 }
